@@ -23,7 +23,6 @@ LUCI_PKGARCH:=all
 define Package/luci-app-turboacc/config
 config PACKAGE_TURBOACC_INCLUDE_OFFLOADING
 	bool "Include Flow Offload"
-	depends on PACKAGE_TURBOACC_INCLUDE_SHORTCUT_FE=n
 	default y
 
 config PACKAGE_TURBOACC_INCLUDE_SHORTCUT_FE
