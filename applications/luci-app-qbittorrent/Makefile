@@ -6,16 +6,16 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=qbittorrent-nox for LuCI
-LUCI_DEPENDS:=+qBittorrent-Enhanced-Edition
+LUCI_DEPENDS:=+qbittorrent
 LUCI_PKGARCH:=all
 
 PKG_NAME:=luci-app-qbittorrent
-PKG_RELEASE:=$(AUTORELEASE)
 
 define Package/luci-app-qbittorrent/conffiles
+/etc/config/qbittorrent
 /etc/qBittorrent/
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
