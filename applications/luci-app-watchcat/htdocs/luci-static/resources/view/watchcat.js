@@ -51,7 +51,7 @@ return view.extend({
 
 		o = s.taboption('general', form.DynamicList, 'pinghosts', _('Hosts To Check'), _(`IP addresses or hostnames to ping.`));
 		o.datatype = 'host';
-		o.default = ['8.8.8.8', '1.1.1.1'];
+		o.default = ['223.5.5.5', '8.8.8.8', '1.1.1.1'];
 		o.depends({ mode: "ping_reboot" });
 		o.depends({ mode: "restart_iface" });
 		o.depends({ mode: "run_script" });
